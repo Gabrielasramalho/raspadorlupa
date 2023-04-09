@@ -1,8 +1,3 @@
 Flask
 gunicorn
-requests
-json
-pandas
-gspread
-tempfile
 
