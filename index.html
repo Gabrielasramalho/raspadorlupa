@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Busca Lupa</title>
+</head>
+<body>
+	<h1>Banco de Verificações da Lupa</h1>
+	<form method="POST">
+		{{ form.csrf_token }}
+		{{ form.keyword.label }} {{ form.keyword }}
+		{{ form.search_type.label }} {{ form.search_type }}
+		{{ form.start_date.label }} {{ form.start_date }}
+		{{ form.end_date.label }} {{ form.end_date }}
+		{{ form.submit }}
+	</form>
+	{% if output %}
+		<a href="{{ url_for('download', filename=filename) }}" class="btn btn-primary">Baixar resultado</a>
+	{% endif %}
+</body>
+</html>
